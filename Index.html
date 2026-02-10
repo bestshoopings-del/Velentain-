@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine's Wish 💌 | Just For You!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff0066, #ff99cc, #ff66b2, #ff3399);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated floating hearts */
+        .hearts-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: floatHeart 20s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Title with animation */
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 4.5rem;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.7);
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: #fffacd;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main card */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 10px solid transparent;
+            border-image: linear-gradient(45deg, #ff0066, #ff99cc, #ff66b2) 1;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, 
+                #ff0066, #ff3399, #ff66b2, #ff99cc, 
+                #ff66b2, #ff3399, #ff0066);
+            z-index: 11;
+        }
+
+        .love-icon {
+            font-size: 5rem;
+            color: #ff0066;
+            margin: 20px 0;
+            animation: heartbeat 1.2s infinite;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1.1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .message {
+            font-size: 1.8rem;
+            color: #660033;
+            margin: 25px 0;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .special-message {
+            background: linear-gradient(45deg, #ffe6f0, #fff0f5);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #ff0066;
+            font-size: 1.5rem;
+            color: #99004d;
+            font-style: italic;
+        }
+
+        /* YES Button - Big and Beautiful */
+        #yesBtn {
+            position: relative;
+            z-index: 101;
+            pointer-events: auto;
+            background: linear-gradient(45deg, #ff0066, #ff3399);
+            color: white;
+            border: none;
+            padding: 25px 60px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 0, 102, 0.5);
+            transition: all 0.3s;
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 0, 102, 0.7);
+            background: linear-gradient(45deg, #ff3399, #ff0066);
+        }
+
+        /* First Popup - Cute Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: linear-gradient(45deg, #ff99cc, #ff66b2);
+            padding: 60px 50px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 90%;
+            width: 600px;
+            position: relative;
+            animation: popupAppear 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+            border: 8px solid white;
+        }
+
+        @keyframes popupAppear {
+            0% { transform: scale(0.3) rotate(-30deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+
+        .popup-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 4rem;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .popup-message {
+            font-size: 1.8rem;
+            color: #660033;
+            margin-bottom: 30px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .popup-btn {
+            background: white;
+            color: #ff0066;
+            border: none;
+            padding: 20px 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .popup-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 2rem;
+            color: #ff0066;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-popup:hover {
+            transform: rotate(90deg);
+            background: white;
+        }
+
+        /* Second Popup - Image Popup with Special Message */
+        .image-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .image-popup-content {
+            background: linear-gradient(45deg, #ff66b2, #ff3399);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 95%;
+            width: 700px;
+            position: relative;
+            animation: imagePopupAppear 0.8s ease-out;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            border: 10px solid #ffccff;
+        }
+
+        @keyframes imagePopupAppear {
+            0% { transform: scale(0.5) translateY(100px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .special-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 20px;
+            border: 8px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            margin-bottom: 25px;
+        }
+
+        .image-popup-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 0 0 15px rgba(255, 0, 102, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .special-wish {
+            font-size: 1.8rem;
+            color: #fff0f5;
+            margin-bottom: 30px;
+            font-weight: 600;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #ffccff;
+        }
+
+        .from-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #ffccff;
+            margin-top: 20px;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 30px 20px;
+            }
+            
+            .message {
+                font-size: 1.5rem;
+            }
+            
+            #yesBtn {
+                padding: 20px 40px;
+                font-size: 1.8rem;
+            }
+            
+            .popup-content {
+                padding: 40px 30px;
+            }
+            
+            .popup-title {
+                font-size: 3rem;
+            }
+            
+            .popup-message {
+                font-size: 1.5rem;
+            }
+            
+            .image-popup-content {
+                padding: 30px 20px;
+            }
+            
+            .image-popup-title {
+                font-size: 2.5rem;
+            }
+            
+            .special-wish {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated hearts background -->
+    <div class="hearts-bg" id="heartsBg"></div>
+    
+    <!-- Main content -->
+    <div class="container">
+        <h1 class="title">My Dearest Love 💖</h1>
+        <h2 class="subtitle">You Mean Everything To Me!</h2>
+        
+        <div class="card">
+            <div class="love-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <p class="message">
+                Every moment with you feels like a beautiful dream! 💭<br>
+                You've filled my life with colors I never knew existed! 🌈
+            </p>
+            
+            <div class="special-message">
+                "In your eyes, I found my home. In your heart, I found my love. In your soul, I found my mate."
+            </div>
+            
+            <p class="message">
+                Will you make me the happiest person and be my Valentine? 💘
+            </p>
+            
+            <button id="yesBtn">
+                <i class="fas fa-heart"></i> YES, MY LOVE! <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        
+        <div class="footer">
+            Made with all my love, just for you! 💕
+        </div>
+    </div>
+    
+    <!-- First Popup - Cute Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()">×</button>
+            <h2 class="popup-title">YAYYY! YOU SAID YES! 🎉💖</h2>
+            
+            <div class="love-icon">
+                <i class="fas fa-heart-circle-check"></i>
+            </div>
+            
+            <p class="popup-message">
+                My heart is dancing with joy! 💃🕺<br>
+                You've just made this the best day of my life! ✨
+            </p>
+            
+            <p class="popup-message">
+                But wait... I have something special for you! 💝
+            </p>
+            
+            <button class="popup-btn" onclick="showImagePopup()">
+                Show Me More! 🥰
+            </button>
+        </div>
+    </div>
+    
+    <!-- Second Popup - Image with Special Wish -->
+    <div class="image-popup" id="imagePopup">
+        <div class="image-popup-content">
+            <button class="close-popup" onclick="closeImagePopup()">×</button>
+            <h2 class="image-popup-title">A Special Wish Just For You! 💌</h2>
+            
+            <img src="https://muhammadakbar.online/logo.png" alt="Special Valentine's Gift" class="special-img" id="specialImage">
+            
+            <div class="special-wish" id="specialWish">
+                My love, on this special day, I want you to know that you are the most precious gift in my life. Every moment with you is a treasure, every smile of yours is my sunshine. I promise to cherish you, adore you, and love you more with each passing day. You are my forever Valentine! 💕
+            </div>
+            
+            <div class="from-text">
+                With all my love, forever yours 💘
+            </div>
+            
+            <button class="popup-btn" onclick="closeImagePopup()" style="margin-top: 30px;">
+                This is Beautiful! 😍
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Create animated hearts background
+        const heartsBg = document.getElementById('heartsBg');
+        
+        for (let i = 0; i < 25; i++) {
+            setTimeout(() => {
+                createHeart();
+            }, i * 300);
+        }
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            heart.style.animationDuration = (Math.random() * 15 + 10) + 's';
+            heart.style.opacity = Math.random() * 0.6 + 0.2;
+            heartsBg.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 20000);
+            
+            // Create new heart periodically
+            setTimeout(createHeart, Math.random() * 5000 + 3000);
+        }
+        
+        // Get elements
+        const yesBtn = document.getElementById("yesBtn");
+        const popup = document.getElementById("popup");
+        const imagePopup = document.getElementById("imagePopup");
+        const specialImage = document.getElementById("specialImage");
+        const specialWish = document.getElementById("specialWish");
+        
+        // Array of romantic wishes (randomly selected)
+        const romanticWishes = [
+            "My love, on this special day, I want you to know that you are the most precious gift in my life. Every moment with you is a treasure, every smile of yours is my sunshine. I promise to cherish you, adore you, and love you more with each passing day. You are my forever Valentine! 💕",
+            
+            "To the one who holds my heart: You've painted my world with colors of love and happiness. On this Valentine's Day, I want to thank you for being you, for loving me, and for making every day special. My love for you grows stronger with every heartbeat. Happy Valentine's Day, my forever love! 🌹",
+            
+            "You are the missing piece I've been searching for my entire life. With you, I've found completeness. On this day of love, I want to promise you that I'll always be there for you, through thick and thin. You are my today and all of my tomorrows. I love you more than words can express! 💖",
+            
+            "Every love story is beautiful, but ours is my favorite. From the moment you came into my life, everything changed for the better. You are my strength, my joy, my everything. This Valentine's Day, I renew my promise to love you endlessly. You are my heart's true home. 🏡💘",
+            
+            "To my soulmate: You've turned ordinary moments into magical memories. Your love has healed my heart and filled my soul with happiness. On this Valentine's Day, I want you to know that you are loved beyond measure, cherished beyond words, and treasured beyond time. Forever yours! ✨"
+        ];
+        
+        // YES button click - show first cute popup
+        yesBtn.addEventListener("click", function() {
+            // Show first popup
+            popup.style.display = "flex";
+            
+            // Create celebration effects
+            createCelebration();
+            
+            // Play celebration sound
+            playCelebrationSound();
+        });
+        
+        // Close first popup
+        function closePopup() {
+            popup.style.display = "none";
+        }
+        
+        // Show image popup with special wish
+        function showImagePopup() {
+            // Close first popup
+            closePopup();
+            
+            // Select a random romantic wish
+            const randomWish = romanticWishes[Math.floor(Math.random() * romanticWishes.length)];
+            specialWish.innerHTML = randomWish;
+            
+            // Show image popup after a short delay
+            setTimeout(() => {
+                imagePopup.style.display = "flex";
+                
+                // Add extra celebration for this special moment
+                createSpecialCelebration();
+            }, 500);
+        }
+        
+        // Close image popup
+        function closeImagePopup() {
+            imagePopup.style.display = "none";
+        }
+        
+        // Celebration effects for first popup
+        function createCelebration() {
+            // Create lots of hearts
+            for (let i = 0; i < 80; i++) {
+                setTimeout(() => {
+                    createCelebrationHeart();
+                }, i * 30);
+            }
+        }
+        
+        // Special celebration for image popup
+        function createSpecialCelebration() {
+            // Create even more hearts
+            for (let i = 0; i < 120; i++) {
+                setTimeout(() => {
+                    createSpecialHeart();
+                }, i * 25);
+            }
+            
+            // Create floating rose petals
+            createRosePetals();
+        }
+        
+        function createCelebrationHeart() {
+      
