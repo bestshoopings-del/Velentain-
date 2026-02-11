@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine's Wish 💌 | Azhar Khan's Love Messages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff0066, #ff99cc, #ff66b2, #ff3399);
+            background-attachment: fixed;
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated floating hearts */
+        .hearts-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: floatHeart 20s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main container - Full screen */
+        .container {
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Title - Full screen display */
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            color: white;
+            text-shadow: 0 0 30px rgba(255, 0, 102, 0.9),
+                         0 0 60px rgba(255, 0, 102, 0.7);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+            padding: 0 20px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.2rem, 7vw, 3.5rem);
+            color: #fffacd;
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            padding: 0 20px;
+        }
+
+        /* Main card - NO BOX, just text on screen */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .love-icon {
+            font-size: clamp(4rem, 10vw, 6rem);
+            color: white;
+            margin: 30px 0;
+            animation: heartbeat 1.2s infinite;
+            text-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1.2); }
+            75% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        /* Messages directly on screen - NO BOX */
+        .message {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            color: white;
+            margin: 25px 0;
+            font-weight: 600;
+            line-height: 1.6;
+            padding: 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+        }
+
+        .special-message {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            color: #fff0f5;
+            margin: 30px 0;
+            font-style: italic;
+            line-height: 1.7;
+            padding: 0 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            max-width: 800px;
+            font-family: 'Dancing Script', cursive;
+            animation: glowText 3s infinite alternate;
+        }
+
+        @keyframes glowText {
+            from { text-shadow: 0 0 10px rgba(255, 240, 245, 0.7); }
+            to { text-shadow: 0 0 20px rgba(255, 240, 245, 1); }
+        }
+
+        /* YES Button - Directly on screen */
+        #yesBtn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            border: none;
+            padding: clamp(18px, 4vh, 25px) clamp(40px, 8vw, 80px);
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 40px;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            backdrop-filter: blur(10px);
+            border: 4px solid white;
+            animation: buttonFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes buttonFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: white;
+        }
+
+        /* FULL SCREEN POPUPS - NO BOXES AT ALL */
+        .fullscreen-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        /* Different full screen backgrounds for each popup */
+        .popup-design-1 {
+            background: linear-gradient(135deg, 
+                #ff0066 0%, 
+                #ff3399 25%, 
+                #ff66b2 50%, 
+                #ff99cc 75%, 
+                #ffccff 100%);
+            animation: gradientShift1 10s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-2 {
+            background: linear-gradient(135deg, 
+                #ff66b2 0%, 
+                #ff3399 25%, 
+                #ff0066 50%, 
+                #99004d 75%, 
+                #660033 100%);
+            animation: gradientShift2 12s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-3 {
+            background: linear-gradient(135deg, 
+                #ff9900 0%, 
+                #ffcc00 25%, 
+                #ffd700 50%, 
+                #ffff00 75%, 
+                #fffacd 100%);
+            animation: gradientShift3 8s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-4 {
+            background: linear-gradient(135deg, 
+                #ff69b4 0%, 
+                #ff1493 25%, 
+                #ff0066 50%, 
+                #c71585 75%, 
+                #8b008b 100%);
+            animation: gradientShift4 15s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-5 {
+            background: linear-gradient(135deg, 
+                #4169e1 0%, 
+                #1e90ff 25%, 
+                #87ceeb 50%, 
+                #00bfff 75%, 
+                #b0e0e6 100%);
+            animation: gradientShift5 10s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-6 {
+            background: linear-gradient(135deg, 
+                #9370db 0%, 
+                #8a2be2 25%, 
+                #dda0dd 50%, 
+                #ba55d3 75%, 
+                #9932cc 100%);
+            animation: gradientShift6 14s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        .popup-design-7 {
+            background: linear-gradient(135deg, 
+                #99004d 0%, 
+                #660033 25%, 
+                #ff0066 50%, 
+                #cc0066 75%, 
+                #ff3399 100%);
+            animation: gradientShift7 12s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientShift1 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift2 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift3 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift4 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift5 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift6 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift7 {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Popup content - Directly on full screen, NO BOX */
+        .popup-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* NO BOX headings - directly on screen */
+        .popup-title {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.8rem, 9vw, 5rem);
+            color: white;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.9),
+                         0 0 60px rgba(255, 0, 102, 0.8);
+            margin-bottom: 40px;
+            line-height: 1.2;
+            padding: 0 20px;
+            animation: titleFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* NO BOX messages - directly on screen */
+        .popup-message {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            color: white;
+            margin: 30px 0;
+            font-weight: 600;
+            line-height: 1.7;
+            padding: 0 25px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            max-width: 900px;
+            animation: messageAppear 1s ease-out;
+        }
+
+        @keyframes messageAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Popup buttons - directly on screen */
+        .popup-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            border: none;
+            padding: clamp(18px, 4vh, 25px) clamp(45px, 8vw, 90px);
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 3px;
+            margin-top: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 4px solid white;
+            animation: buttonAppear 1.5s ease-out 0.5s both;
+        }
+
+        @keyframes buttonAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .popup-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: white;
+        }
+
+        /* Image Popups - Full Screen, NO BOX */
+        .image-popup-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+
+        .special-img {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 25px;
+            border: 8px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            margin: 30px 0;
+            animation: imageFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes imageFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+            75% {
+                transform: translateY(-10px) rotate(-2deg);
+            }
+        }
+
+        /* Special wish - directly on screen */
+        .special-wish {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            color: white;
+            margin: 40px 0;
+            font-weight: 600;
+            line-height: 1.7;
+            padding: 0 25px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            max-width: 900px;
+            animation: wishAppear 1.2s ease-out;
+        }
+
+        @keyframes wishAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Urdu Text */
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            font-size: clamp(1.8rem, 5vw, 2.4rem);
+            line-height: 1.9;
+            text-align: right;
+            padding: 0 25px;
+        }
+
+        /* From text - directly on screen */
+        .from-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2rem, 6vw, 3rem);
+            color: white;
+            margin-top: 50px;
+            text-align: center;
+            padding: 0 20px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            animation: signatureAppear 1.5s ease-out 1s both;
+        }
+
+        @keyframes signatureAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation buttons - directly on screen */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            animation: buttonsAppear 1s ease-out 1.2s both;
+        }
+
+        @keyframes buttonsAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            border: none;
+            padding: 18px 35px;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            min-width: 180px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 3px solid white;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+            background: white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Message counter */
+        .message-counter {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            border: 3px solid white;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Show More Button */
+        .show-more-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            border: none;
+            padding: clamp(18px, 4vh, 25px) clamp(45px, 8vw, 90px);
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            margin-top: 40px;
+            font-family: 'Dancing Script', cursive;
+            display: none;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border: 4px solid white;
+            backdrop-filter: blur(10px);
+            letter-spacing: 2px;
+        }
+
+        .show-more-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: white;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-style: italic;
+            padding: 0 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Final Full Screen Love Message - NO BOX */
+        .final-love-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .final-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, 
+                #ff0066 0%, 
+                #ff3399 25%, 
+                #ff66b2 50%, 
+                #ff99cc 75%, 
+                #ffccff 100%);
+            animation: finalGradient 20s ease infinite;
+            background-size: 400% 400%;
+            position: relative;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @keyframes finalGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .final-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.15) 70%);
+            z-index: 1;
+        }
+
+        .final-heart {
+            font-size: clamp(6rem, 15vw, 10rem);
+            color: white;
+            margin-bottom: 50px;
+            animation: heartbeat 1.2s infinite;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.9),
+                         0 0 100px rgba(255, 0, 102, 0.8);
+            z-index: 2;
+            position: relative;
+        }
+
+        .final-title {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(3.5rem, 12vw, 6rem);
+            color: white;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.9),
+                         0 0 80px rgba(255, 0, 102, 0.8);
+            margin-bottom: 50px;
+            line-height: 1.2;
+            z-index: 2;
+            position: relative;
+            padding: 0 20px;
+            animation: finalTitleFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes finalTitleFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Final text - directly on screen */
+        .final-text {
+            font-size: clamp(1.8rem, 6vw, 3rem);
+            color: white;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            font-family: 'Dancing Script', cursive;
+            padding: 0 30px;
+            max-width: 1000px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            position: relative;
+            animation: finalTextAppear 1.5s ease-out;
+        }
+
+        @keyframes finalTextAppear {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .special-valentine-wish {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: #ffccff;
+            margin: 50px 0;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 0 0 30px rgba(255, 204, 255, 0.9),
+                         0 0 60px rgba(255, 0, 102, 0.8);
+            animation: glow 2s infinite alternate;
+            z-index: 2;
+            position: relative;
+        }
+
+        @keyframes glow {
+            from { 
+                text-shadow: 0 0 25px rgba(255, 204, 255, 0.9),
+                             0 0 50px rgba(255, 0, 102, 0.8); 
+            }
+            to { 
+                text-shadow: 0 0 35px rgba(255, 204, 255, 1),
+                             0 0 70px rgba(255, 0, 102, 0.9); 
+            }
+        }
+
+        /* Final signature - directly on screen */
+        .final-signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: white;
+            margin-top: 50px;
+            padding: 0 30px;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+            z-index: 2;
+            position: relative;
+            animation: finalSignatureAppear 2s ease-out 0.5s both;
+        }
+
+        @keyframes finalSignatureAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px) rotate(-5deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff0066;
+            border: none;
+            padding: 25px 70px;
+            font-size: clamp(2rem, 6vw, 2.8rem);
+            font-weight: 700;
+            border-radius: 70px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 3px;
+            margin-top: 60px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 5px solid white;
+            z-index: 2;
+            position: relative;
+            animation: finalButtonBounce 1.5s ease-out 1s both;
+        }
+
+        @keyframes finalButtonBounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            40% {
+                transform: translateY(-25px) scale(1.08);
+            }
+            60% {
+                transform: translateY(-15px) scale(1.04);
+            }
+        }
+
+        .close-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            background: white;
+        }
+
+        /* Love explosion animation */
+        .love-explosion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 3000;
+        }
+
+        .explosion-heart {
+            position: absolute;
+            font-size: 50px;
+            animation: explode 2s ease-out forwards;
+            text-shadow: 0 0 30px currentColor;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: translate(0, 0) scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(2) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .nav-btn {
+                width: 90%;
+                max-width: 300px;
+            }
+            
+            .special-img {
+                max-width: 300px;
+            }
+            
+            .message, .special-message, .popup-message, .special-wish {
+                padding: 0 15px;
+            }
+            
+            .close-btn {
+                padding: 20px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container, .popup-content, .image-popup-content, .final-content {
+                padding: 15px;
+            }
+            
+            .message-counter {
+                top: 10px;
+                left: 10px;
+                padding: 10px 20px;
+            }
+            
+            .special-img {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated hearts background -->
+    <div class="hearts-bg" id="heartsBg"></div>
+    
+    <!-- Main content - NO BOX -->
+    <div class="container">
+        <h1 class="title">My Dearest Love 💖</h1>
+        <h2 class="subtitle">You Mean Everything To Me!</h2>
+        
+        <div class="card">
+            <div class="love-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <p class="message">
+                Every moment with you feels like a beautiful dream! 💭<br>
+                You've filled my life with colors I never knew existed! 🌈
+            </p>
+            
+            <div class="special-message">
+                "In your eyes, I found my home. In your heart, I found my love. In your soul, I found my mate."
+            </div>
+            
+            <p class="message">
+                Will you make me the happiest person and be my Valentine? 💘
+            </p>
+            
+            <button id="yesBtn">
+                <i class="fas fa-heart"></i> YES, MY LOVE! <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        
+        <button class="show-more-btn" id="showMoreBtn">
+            <i class="fas fa-gift"></i> Show More Love Messages <i class="fas fa-gift"></i>
+        </button>
+        
+        <div class="footer">
+            Made with all my love, just for you! 💕
+        </div>
+    </div>
+    
+    <!-- First Popup - YAYYY Popup - NO BOX -->
+    <div class="fullscreen-popup popup-design-1" id="popup" style="display: none;">
+        <div class="popup-content">
+            <h2 class="popup-title">YAYYY! YOU SAID YES! 🎉💖</h2>
+            
+            <div class="love-icon" style="font-size: 6rem;">
+                <i class="fas fa-heart-circle-check"></i>
+            </div>
+            
+            <p class="popup-message">
+                My heart is dancing with joy! 💃🕺<br>
+                You've just made this the best day of my life! ✨
+            </p>
+            
+            <p class="popup-message">
+                But wait... I have something special for you! 💝<br>
+                I've prepared 7 beautiful messages just for you, my love!
+            </p>
+            
+            <button class="popup-btn" onclick="showFirstImagePopup()">
+                <i class="fas fa-heart"></i> Show Me! <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Image Popup Template - NO BOX -->
+    <div class="fullscreen-popup" id="imagePopupTemplate" style="display: none;">
+        <div class="image-popup-content" id="popupDesign">
+            <div class="message-counter" id="messageCounter">Message 1 of 7</div>
+            <h2 class="popup-title" id="popupHeading">A Special Wish Just For You! 💌</h2>
+            
+            <img src="https://muhammadakbar.online/logo.png" alt="Special Valentine's Gift" class="special-img" id="popupImage">
+            
+            <div class="special-wish" id="popupMessage">
+                Loading beautiful message for you...
+            </div>
+            
+            <div class="from-text" id="signature">
+                With all my love, forever yours 💘<br>
+                <span style="color: white; font-size: 3rem;">~ Azhar Khan</span>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="nav-btn" id="prevBtn" onclick="showPreviousPopup()">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="nav-btn" id="nextBtn" onclick="showNextPopup()">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Final Full Screen Love Message - NO BOX -->
+    <div class="final-love-screen" id="finalLoveMessage">
+        <div class="final-content">
+            <div class="final-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <h2 class="final-title">I LOVE YOU SO MUCH! 💖</h2>
+            
+            <div class="final-text">
+                My dearest Jind Jan,<br><br>
+                These 7 messages were just a small glimpse of how much you mean to me.<br>
+                My love for you is endless, my heart is forever yours.<br>
+                You are my everything, my world, my reason to smile every single day.<br><br>
+                I cherish every moment with you, every smile, every laugh, every dream we share.
+            </div>
+            
+            <div class="special-valentine-wish">
+                Happy Valentine's Day, My Love! 💝
+            </div>
+            
+            <div class="final-text">
+                You are the most beautiful blessing in my life.<br>
+                My love for you grows stronger with each passing day.<br>
+                You complete me in ways I never thought possible.<br><br>
+                I promise to love you, cherish you, and stand by you forever.
+            </div>
+            
+            <div class="final-signature">
+                Forever and always yours,<br>
+                <span style="font-size: 5rem; color: #ffccff;">Azhar Khan 💘</span>
+            </div>
+            
+            <button class="close-btn" onclick="closeFinalMessage()">
+                <i class="fas fa-heart"></i> I Love You Too, My Jind! <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Love explosion container -->
+    <div class="love-explosion" id="loveExplosion"></div>
+
+    <script>
+        // Create animated hearts background
+        const heartsBg = document.getElementById('heartsBg');
+        
+        for (let i = 0; i < 25; i++) {
+            setTimeout(() => {
+                createHeart();
+            }, i * 200);
+        }
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 25 + 20) + 'px';
+            heart.style.animationDuration = (Math.random() * 15 + 10) + 's';
+            heart.style.opacity = Math.random() * 0.6 + 0.2;
+            heartsBg.appendChild(heart);
+            
+            setTimeout(() => {
+                if (heart.parentNode) heart.remove();
+            }, 25000);
+            
+            setTimeout(createHeart, Math.random() * 5000 + 3000);
+        }
+        
+        // Get elements
+        const yesBtn = document.getElementById("yesBtn");
+        const popup = document.getElementById("popup");
+        const showMoreBtn = document.getElementById("showMoreBtn");
+        const finalLoveMessage = document.getElementById("finalLoveMessage");
+        const loveExplosion = document.getElementById("loveExplosion");
+        
+        // Special romantic messages from Azhar Khan
+        const romanticMessages = [
+            {
+                title: "My First Promise to You 💕",
+                message: "My dearest Jind Jan, from the moment I met you, my life transformed into a beautiful melody. Your smile is my sunshine, your voice is my favorite song, and your love is the rhythm of my heartbeat. I promise to cherish every moment with you, to hold you close when you need comfort, and to be your strength when you feel weak. You are my everything.",
+                language: "english",
+                designClass: "popup-design-1"
+            },
+            {
+                title: "You Complete Me ✨",
+                message: "Before you, I was like a puzzle with missing pieces. You came into my life and completed me in ways I never imagined possible. Your love fills the empty spaces in my soul. Every day with you is a blessing, every night dreaming of you is a gift. I'm forever grateful that our souls found each other in this vast universe.",
+                language: "english",
+                designClass: "popup-design-2"
+            },
+            {
+                title: "My Eternal Love 💖",
+                message: "My love for you grows stronger with each passing moment. It's not just a feeling - it's a commitment, a promise, a bond that transcends time. I love the way your eyes sparkle when you laugh, the way your hand fits perfectly in mine, the way your presence makes everything better. You are my today, tomorrow, and forever.",
+                language: "english",
+                designClass: "popup-design-3"
+            },
+            {
+                title: "میری محبت کی پہلی نظم 💘",
+                message: "تم میرے دل کی دھڑکن ہو، میری سانسوں کا سکون ہو۔ تمہاری ہر مسکان میرے لئے خوشیوں کا تحفہ ہے، تمہاری ہر بات میرے لئے حکم ہے۔ میں ہمیشہ تمہارے ساتھ رہوں گا، ہر مشکل میں تمہارا سہارا بنوں گا۔ تم میرے لئے دنیا کی سب سے قیمتی چیز ہو۔",
+                language: "urdu",
+                designClass: "popup-design-4"
+            },
+            {
+                title: "تم میری زندگی کا مقصد ہو 🌹",
+                message: "تمہاری محبت نے مجھے زندگی جینے کا نیا انداز سکھایا ہے۔ تمہارے بغیر میری زندگی ادھوری تھی، تم نے اسے مکمل کر دیا۔ میں ہمیشہ تمہاری حفاظت کروں گا، تمہاری ہر خواہش پوری کروں گا۔ تم میری آنکھوں کی ٹھنڈک، میرے دل کی تسکین ہو۔",
+                language: "urdu",
+                designClass: "popup-design-5"
+            },
+            {
+                title: "میرا دل تمہارا ہو گیا ہے ❤️",
+                message: "تمہارے لئے میرا محبت ہر لمحہ بڑھتی جا رہی ہے۔ تمہاری یاد میرے دل کو چھو لیتی ہے، تمہاری محبت میرے وجود کو سنوارتی ہے۔ میں تمہیں کبھی تنہا نہیں چھوڑوں گا، ہمیشہ تمہارے ساتھ رہوں گا۔ تم میرے لئے اللہ کا سب سے بڑا تحفہ ہو۔",
+                language: "urdu",
+                designClass: "popup-design-6"
+            },
+            {
+                title: "ہمیشہ تمہارا اظہر خان 💕",
+                message: "میری محبوبہ، آج اس خوبصورت موقع پر میں تمہیں یقین دلاتا ہوں کہ تم میری زندگی کا سب سے قیمتی تحفہ ہو۔ میں ہمیشہ تمہارے ساتھ رہوں گا، تمہاری ہر خوشی میں شریک رہوں گا، ہر غم میں تمہارا ساتھ دوں گا۔ تم میری جان ہو، میری دنیا ہو، میری سب کچھ ہو۔ ہمیشہ تمہارا، اظہر خان۔",
+                language: "urdu",
+                designClass: "popup-design-7"
+            }
+        ];
+        
+        let currentPopupIndex = 0;
+        let currentImagePopup = null;
+        
+        // YES button click
+        yesBtn.addEventListener("click", function() {
+            // Hide YES button
+            yesBtn.style.display = "none";
+            
+            // Show first popup
+            popup.style.display = "block";
+            
+            // Create celebration effects
+            createCelebration();
+            
+            // Play celebration sound
+            playCelebrationSound();
+        });
+        
+        // Show first image popup
+        function showFirstImagePopup() {
+            // Close first popup
+            popup.style.display = "none";
+            
+            // Start with first message
+            currentPopupIndex = 0;
+            showImagePopup();
+        }
+        
+        // Show image popup
+        function showImagePopup() {
+            // Close any existing popup
+            if (currentImagePopup) {
+                currentImagePopup.style.display = "none";
+            }
+            
+            // Get message data
+            const messageData = romanticMessages[currentPopupIndex];
+            
+            // Create a new popup
+            const popupTemplate = document.getElementById('imagePopupTemplate');
+            currentImagePopup = popupTemplate.cloneNode(true);
+            currentImagePopup.id = 'currentImagePopup';
+            
+            // Update popup content
+            const heading = currentImagePopup.querySelector('#popupHeading');
+            const message = currentImagePopup.querySelector('#popupMessage');
+            const counter = currentImagePopup.querySelector('#messageCounter');
+            const design = currentImagePopup.querySelector('#popupDesign');
+            const signature = currentImagePopup.querySelector('#signature');
+            const prevBtn = currentImagePopup.querySelector('#prevBtn');
+            const nextBtn = currentImagePopup.querySelector('#nextBtn');
+            
+            // Update content
+            heading.textContent = messageData.title;
+            counter.textContent = `Message ${currentPopupIndex + 1} of ${romanticMessages.length}`;
+            
+            // Apply design class to the fullscreen popup
+            currentImagePopup.className = 'fullscreen-popup ' + messageData.designClass;
+            
+            // Apply language-specific styling
+            if (messageData.language === "urdu") {
+                message.className = "special-wish urdu-text";
+            } else {
+                message.className = "special-wish";
+            }
+            
+            message.textContent = messageData.message;
+            
+            // Update signature for Urdu messages
+            if (messageData.language === "urdu") {
+                signature.innerHTML = `ہمیشہ تمہارا محبت سے<br>
+                    <span style="color: white; font-size: 3rem; font-family: 'Noto Nastaliq Urdu', serif;">
+                        اظہر خان 💘
+                    </span>`;
+            } else {
+                signature.innerHTML = `With all my love, forever yours<br>
+                    <span style="color: white; font-size: 3rem; font-family: 'Dancing Script', cursive;">
+                        ~ Azhar Khan
+                    </span>`;
+            }
+            
+            // Update button states
+            prevBtn.disabled = currentPopupIndex === 0;
+            prevBtn.style.opacity = currentPopupIndex === 0 ? "0.5" : "1";
+            
+            nextBtn.disabled = currentPopupIndex === romanticMessages.length - 1;
+            nextBtn.innerHTML = currentPopupIndex === romanticMessages.length - 1 
+                ? 'Complete <i class="fas fa-heart"></i>' 
+                : 'Next <i class="fas fa-arrow-right"></i>';
+            
+            // Add to body and show
+            document.body.appendChild(currentImagePopup);
+            currentImagePopup.style.display = "block";
+            
+            // Add special effects for first message
+            if (currentPopupIndex === 0) {
+                createCelebration();
+            }
+        }
+        
+        // Show next popup
+        function showNextPopup() {
+            if (currentPopupIndex < romanticMessages.length - 1) {
+                currentPopupIndex++;
+                showImagePopup();
+            } else {
+                // Last message - show final love message
+                closeImagePopup();
+                setTimeout(() => {
+                    showFinalLoveMessage();
+                }, 300);
+            }
+        }
+        
+        // Show previous popup
+        function showPreviousPopup() {
+            if (currentPopupIndex > 0) {
+                currentPopupIndex--;
+                showImagePopup();
+            }
+        }
+        
+        // Close current image popup
+        function closeImagePopup() {
+            if (currentImagePopup) {
+                currentImagePopup.style.display = "none";
+                currentImagePopup.remove();
+                currentImagePopup = null;
+            }
+        }
+        
+        // Show final love message
+        function showFinalLoveMessage() {
+            finalLoveMessage.style.display = "block";
+            
+            // Create love explosion
+            createLoveExplosion();
+            
+            // Create final celebration
+            createFinalCelebration();
+            
+            // Hide show more button
+            showMoreBtn.style.display = "none";
+        }
+        
+        // Close final message
+        function closeFinalMessage() {
+            finalLoveMessage.style.display = "none";
+            
+            // Show show more button
+            showMoreBtn.style.display = "inline-block";
+        }
+        
+        // Show More Button - Show all messages again
+        showMoreBtn.addEventListener('click', function() {
+            showMoreBtn.style.display = 'none';
+            currentPopupIndex = 0;
+            showImagePopup();
+        });
+        
+        // Love explosion effect
+        function createLoveExplosion() {
+            const hearts = ['❤', '💖', '💕', '💘', '💝', '💗', '💓', '💞'];
+            const colors = ['#ff0066', '#ff3399', '#ff66b2', '#ff99cc', '#ffccff', '#ffffff'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('explosion-heart');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.left = '50%';
+                    heart.style.top = '50%';
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = 100 + Math.random() * 300;
+                    const tx = Math.cos(angle) * distance;
+                    const ty = Math.sin(angle) * distance;
+                    
+                    heart.style.setProperty('--tx', tx + 'px');
+                    heart.style.setProperty('--ty', ty + 'px');
+                    
+                    loveExplosion.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) heart.remove();
+                    }, 2000);
+                }, i * 50);
+            }
+        }
+        
+        // Celebration effects
+        function createCelebration() {
+            const hearts = ['❤', '💖', '💕', '💘'];
+            
+            for (let i = 0; i < 40; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                    heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    heart.style.color = '#ff0066';
+                    heart.style.opacity = 0.9;
+                    heart.style.zIndex = '1001';
+                    
+                    document.body.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) heart.remove();
+                    }, 3000);
+                }, i * 50);
+            }
+        }
+        
+        function createFinalCelebration() {
+            const hearts = ['❤', '💖', '💕', '💘', '💝', '💗', '💓', '💞'];
+            const colors = ['#ff0066', '#ff3399', '#ff66b2', '#ff99cc', '#ffccff', '#ffffff'];
+            
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.fontSize = (Math.random() * 40 + 25) + 'px';
+                    heart.style.animationDuration = (Math.random() * 4 + 3) + 's';
+                    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.opacity = 0.9;
+                    heart.style.zIndex = '2001';
+                    
+                    document.body.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) heart.remove();
+                    }, 4000);
+                }, i * 30);
+            }
+        }
+        
+        // Celebration sound
+        function playCelebrationSound() {
+            try {
+                if (window.AudioContext || window.webkitAudioContext) {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    
+                    // Play a sequence of notes
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    
+                    notes.forEach((freq, index) => {
+                        setTimeout(() => {
+                            const oscillator = audioContext.createOscillator();
+                            const gainNode = audioContext.createGain();
+                            
+                            oscillator.connect(gainNode);
+                            gainNode.connect(audioContext.destination);
+                            
+                            oscillator.frequency.value = freq;
+                            oscillator.type = 'sine';
+                            
+                            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                            
+                            oscillator.start(audioContext.currentTime);
+                            oscillator.stop(audioContext.currentTime + 0.3);
+                        }, index * 200);
+                    });
+                }
+            } catch (e) {
+                // Sound not supported
+            }
+        }
+    </script>
+</body>
+</html>
